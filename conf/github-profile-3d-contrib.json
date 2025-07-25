@@ -1,0 +1,17 @@
+[
+  {
+    "type":         "rainbow",
+    "fileName":     "profile-night-rainbow.svg",
+    "backgroundColor": "none",
+    "foregroundColor": "#ffffff",
+    "strongColor":   "#FFC837",
+    "weakColor":     "#666666",
+    "radarColor":    "#FFC837",
+    "growingAnimation": true,
+    "saturation":   "50%",
+    "contribLightness": [ "20%","30%","40%","50%","60%" ],
+    "duration":     "10s",
+    "hueRatio":    -7,
+    "showLanguage": false          // drop the “Python / Other” legend completely
+  }
+]
