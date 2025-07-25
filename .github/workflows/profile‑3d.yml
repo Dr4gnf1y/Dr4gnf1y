@@ -1,9 +1,11 @@
+# .github/workflows/profile-3d.yml
 name: GitHub‑Profile‑3D‑Contrib
 
 on:
+  # daily at 18 UTC (03:00 JST)—adjust if you like
   schedule:
-    - cron: "0 18 * * *"        # daily at 18 UTC – change if you wish
-  workflow_dispatch:
+    - cron: "0 18 * * *"
+  workflow_dispatch:      # manual “Run workflow” button
 
 permissions:
   contents: write
@@ -11,34 +13,28 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. check out your profile repo
+      # 1 ‑ Check out your profile repository
       - uses: actions/checkout@v4
 
-      # 2. generate the SVG according to the JSON
+      # 2 ‑ Generate the SVG(s) from your settings JSON
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      # 3. patch the freshly‑built SVG with your own CSS and strip lang labels
-      - name: Apply custom style & purge Python/Other
+      # 3 ‑ Append your custom CSS so it overrides everything else
+      - name: Append custom style
         run: |
           svg="profile-3d-contrib/profile-night-rainbow.svg"
-
-          # wipe EVERY <style>…</style> block, wherever it is
-          perl -0777 -i -pe 's|<style[^>]*>[\\s\\S]*?</style>||g' "$svg"
-
-          # insert YOUR style directly after <svg …>
           css=$(cat conf/custom-style.css)
-          perl -0777 -i -pe "s|(<svg[^>]*>)|\$1\n<style>\n${css//$'\n'/\\n}\n</style>|" "$svg"
 
-          # remove the two language labels completely
-          sed -i '/>Python<.*/d' "$svg"
-          sed -i '/>Other<.*/d'  "$svg"
+          # insert our style just before </svg>
+          perl -0777 -i -pe "s|</svg>|<style>\n${css//$'\n'/\\n}\n</style>\n</svg>|" "$svg"
 
-      # 4. keep only the one file (first run cleans legacy artefacts)
+      # 4 ‑ Ensure only the customised SVG is kept
       - name: Remove any other SVGs
         run: |
           cd profile-3d-contrib
@@ -47,7 +43,7 @@ jobs:
           done
           cd ..
 
-      # 5. commit if something actually changed
+      # 5 ‑ Commit if something actually changed
       - name: Commit & Push
         run: |
           git config user.name  "github-actions"
