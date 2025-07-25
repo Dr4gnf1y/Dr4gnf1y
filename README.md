@@ -1,6 +1,7 @@
 ## Howdy 🤙
 
-[![I'm Ray – Marine Veteran & AWS Cloud Engineer](https://svg-banners.vercel.app/api?type=typeWriter&text1=I%27m%20Ray%2C%20Marine%20Veteran%20and%20AWS%20Cloud%20Engineer&width=900&height=100)](https://github.com/TreadSoftly/Projects)
+![I'm Ray – Marine Veteran, AWS Cloud Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=22&pause=500&color=00b304&center=true&vCenter=true&width=900&height=60&lines=I%27m+Ray+%E2%80%93+Marine+Veteran,+AWS+Cloud+Engineer+%26+All+Around+Nerd!)
+
 
 ### 🧐 Focusing on:
 - `Security`,&nbsp;`AI/ML` &&nbsp;`Part 107 Drone capabilities.`<br>
@@ -22,3 +23,10 @@
 <br>
 
 ![Rays GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dr4gnf1y&show_icons=true&theme=shadow_red)
+
+<br>
+
+<img alt="Banner"
+     src="https://github.com/TreadSoftly/Projects/assets/121847455/acf6e587-b91c-43ef-90c8-70eed199a5dc"
+     width="500" height="150"/>
+
