@@ -2,10 +2,9 @@
 name: GitHub‑Profile‑3D‑Contrib
 
 on:
-  # daily at 18 UTC (03:00 JST)—adjust if you like
   schedule:
-    - cron: "0 18 * * *"
-  workflow_dispatch:      # manual “Run workflow” button
+    - cron: "0 18 * * *"          # daily at 18 UTC
+  workflow_dispatch:              # manual “Run workflow”
 
 permissions:
   contents: write
@@ -13,28 +12,26 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1 ‑ Check out your profile repository
+      # 1 Check out repo
       - uses: actions/checkout@v4
 
-      # 2 ‑ Generate the SVG(s) from your settings JSON
+      # 2 Generate SVG from JSON
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      # 3 ‑ Append your custom CSS so it overrides everything else
+      # 3 Append your custom CSS so it overrides everything else
       - name: Append custom style
         run: |
           svg="profile-3d-contrib/profile-night-rainbow.svg"
           css=$(cat conf/custom-style.css)
-
-          # insert our style just before </svg>
+          # place our style right before </svg>
           perl -0777 -i -pe "s|</svg>|<style>\n${css//$'\n'/\\n}\n</style>\n</svg>|" "$svg"
 
-      # 4 ‑ Ensure only the customised SVG is kept
+      # 4 Keep only the customised SVG
       - name: Remove any other SVGs
         run: |
           cd profile-3d-contrib
@@ -43,7 +40,7 @@ jobs:
           done
           cd ..
 
-      # 5 ‑ Commit if something actually changed
+      # 5 Commit if the file changed
       - name: Commit & Push
         run: |
           git config user.name  "github-actions"
