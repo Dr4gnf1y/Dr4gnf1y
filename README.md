@@ -26,8 +26,4 @@
 
 <br>
 
-<img alt="Banner"
-     src="https://github.com/TreadSoftly/Projects/assets/121847455/acf6e587-b91c-43ef-90c8-70eed199a5dc"
-     width="500" height="150"/>
-
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
