@@ -1,6 +1,6 @@
 ## Howdy 🤙
 
-![I'm Ray – Marine Veteran, AWS Cloud Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=22&pause=500&color=00b304&center=true&vCenter=true&width=900&height=20&lines=I%27m+Ray+%E2%80%93+Marine+Veteran,+AWS+Cloud+Engineer+%26+All+Around+Nerd!)
+![I'm Ray – Marine Veteran, AWS Cloud Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=25&pause=5500&color=00b304&center=true&vCenter=true&width=1050&height=45&lines=I%27m+Ray+%E2%80%93+Marine+Veteran,+AWS+Cloud+Engineer+%26+All+Around+Nerd!)
 
 
 ### 🧐 Focusing on:
