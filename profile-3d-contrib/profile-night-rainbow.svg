@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="850" viewBox="0 0 1280 850"><style>* { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
 .fill-fg { fill: #1ba409ff; }
 .stroke-fg { stroke: #0000ffff; }
-.fill-bg { fill: #000000ff; }
+.fill-bg { fill: none; }
 .stroke-bg { stroke: none; }
 .fill-strong { fill: #ff0000ff; }
 .fill-weak { fill: gray; }
