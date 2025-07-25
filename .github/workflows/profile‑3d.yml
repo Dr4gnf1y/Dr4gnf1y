@@ -1,0 +1,61 @@
+name: GitHub‑Profile‑3D‑Contrib
+
+on:
+  schedule:
+    - cron: "0 18 * * *"        # daily at 18 UTC – change if you wish
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. check out your profile repo
+      - uses: actions/checkout@v4
+
+      # 2. generate the SVG according to the JSON
+      - uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME:      ${{ github.repository_owner }}
+          SETTING_JSON:  conf/github-profile-3d-contrib.json
+
+      # 3. patch the freshly‑built SVG with your own CSS and strip lang labels
+      - name: Apply custom style & purge Python/Other
+        run: |
+          svg="profile-3d-contrib/profile-night-rainbow.svg"
+
+          # wipe existing <style>…</style> block
+          perl -0777 -i -pe 's|<style>[\\s\\S]*?</style>||' "$svg"
+
+          # insert YOUR style directly after <svg …>
+          css=$(cat conf/custom-style.css)
+          perl -0777 -i -pe "s|(<svg[^>]*>)|\$1\n<style>\n${css//$'\n'/\\n}\n</style>|" "$svg"
+
+          # remove the two language labels completely
+          sed -i '/>Python<.*/d' "$svg"
+          sed -i '/>Other<.*/d'  "$svg"
+
+      # 4. keep only the one file (first run cleans legacy artefacts)
+      - name: Remove any other SVGs
+        run: |
+          cd profile-3d-contrib
+          for f in *; do
+            [ "$f" = "profile-night-rainbow.svg" ] || rm -f "$f"
+          done
+          cd ..
+
+      # 5. commit if something actually changed
+      - name: Commit & Push
+        run: |
+          git config user.name  "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A .
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Automated update of custom night‑rainbow SVG"
+            git push
+          fi
