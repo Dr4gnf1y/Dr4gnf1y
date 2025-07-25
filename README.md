@@ -19,13 +19,8 @@
 ## 📌 Be sure to check out my Projects:
 [![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=800300&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FProjects;Click+To+Open)](https://github.com/TreadSoftly/Projects)
 
-### 🔗 Feel free to linkup with me at: ~> [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
+### 🔗 Feel free to linkup with me at: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
 
-<br>
-
-<img alt="Banner"
-     src="https://github.com/TreadSoftly/Projects/assets/121847455/acf6e587-b91c-43ef-90c8-70eed199a5dc"
-     width="750" height="250"/>
 <br>
 
 ![Rays GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dr4gnf1y&show_icons=true&theme=shadow_red)
