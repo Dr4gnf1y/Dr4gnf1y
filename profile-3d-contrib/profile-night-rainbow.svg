@@ -2,7 +2,7 @@
 .fill-fg { fill: #1ba409ff; }
 .stroke-fg { stroke: #0000ffff; }
 .fill-bg  { fill: none; }
-.stroke-bg { stroke: #ffffff; }
+.stroke-bg{ stroke: none; }
 .fill-strong { fill: #1ba409ff; }
 .fill-weak { fill: gray; }
 .stroke-weak { stroke: gray; }
