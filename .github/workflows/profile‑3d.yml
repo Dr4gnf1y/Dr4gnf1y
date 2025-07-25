@@ -27,8 +27,8 @@ jobs:
         run: |
           svg="profile-3d-contrib/profile-night-rainbow.svg"
 
-          # wipe existing <style>…</style> block
-          perl -0777 -i -pe 's|<style>[\\s\\S]*?</style>||' "$svg"
+          # wipe EVERY <style>…</style> block, wherever it is
+          perl -0777 -i -pe 's|<style[^>]*>[\\s\\S]*?</style>||g' "$svg"
 
           # insert YOUR style directly after <svg …>
           css=$(cat conf/custom-style.css)
