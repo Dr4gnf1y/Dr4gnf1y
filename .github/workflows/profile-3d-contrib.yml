@@ -2,49 +2,65 @@ name: generate 3d chart for profile contributions
 
 on:
   schedule:
-    - cron: "0 18 * * *"          # daily at 18 UTC
-  workflow_dispatch:              # manual trigger
-  push:                           # rebuild when JSON changes
+    - cron: '0 18 * * *'          # daily at 18 UTC
+  workflow_dispatch:
+  push:
     branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # ── checkout ───────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Generate SVGs
+      # ── build LEGO‑style SVGs from your bitmap JSON ────────────
+      - name: Generate SVGs (day & night)
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      - name: Inject CSS overrides (brick‑rainbow + extras)
+      # ── splice rainbow CSS & tweaks into every SVG ─────────────
+      - name: Inject CSS overrides (rainbow + extras)
         shell: bash
         run: |
           tmp=$(mktemp)
 
-          cat >"$tmp"<<'CSS'
-          @keyframes brickRainbow {
-            0%   { fill:#ff0000; }
-            20%  { fill:#ff7f00; }
-            40%  { fill:#ffff00; }
-            60%  { fill:#00ff00; }
-            80%  { fill:#0000ff; }
-            100% { fill:#ff0000; }
+          # ---------- CSS that will be inserted ----------
+          cat > "$tmp" <<'EOF'
+          @keyframes legoRainbow{0%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);}}
+
+          @keyframes brickRainbowFill{
+            0%{fill:#ff0000;}20%{fill:#ff7f00;}40%{fill:#ffff00;}
+            60%{fill:#00ff00;}80%{fill:#0000ff;}100%{fill:#ff0000;}
           }
-          g rect         { animation:brickRainbow 4s linear infinite; }
-          .stroke-fg     { stroke:#0000ff; }
-          .radar         { stroke-width:4px; fill:#0dff00; fill-opacity:0.5; stroke:#ff0000; }
-          CSS
+
+          /* Desktop + modern Android */
+          g rect{animation:legoRainbow 4s linear infinite;}
+
+          /* iOS / Safari fallback – animates fill instead of filter */
+          @supports(-webkit-overflow-scrolling:touch){
+            g *[fill]:not([fill="none"]){
+              animation:brickRainbowFill 4s linear infinite;
+            }
+          }
+
+          /* extra tweaks */
+          .stroke-fg{stroke:#0000ff;}
+          .radar{stroke-width:4px;fill:#0dff00;fill-opacity:0.5;stroke:#ff0000;}
+          EOF
+          # -------------------------------------------------------
 
           for svg in profile-3d-contrib/*.svg; do
-            # insert CSS right after the first <style> tag
+            # insert CSS immediately after the *first* <style> tag
             sed -i '/<style>/r '"$tmp" "$svg"
           done
 
-      - name: Push SVGs to output-3d-contrib branch
+      # ── publish finished SVGs to a clean branch ────────────────
+      - name: Publish SVGs to output‑3d‑contrib branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output-3d-contrib
