@@ -1,4 +1,3 @@
-# .github/workflows/profile-3d-contrib.yml
 name: generate 3d chart for profile contributions
 
 on:
@@ -22,34 +21,35 @@ jobs:
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      - name: Inject CSS overrides (desktop + iOS)
+      - name: Inject CSS overrides (deskto + iOS)
         shell: bash
         run: |
           tmp=$(mktemp)
 
           cat >"$tmp"<<'CSS'
-          /* ===== rainbow animation ===== */
-          @keyframes legoRainbow      {0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
-          @keyframes brickRainbowFill {
+          /* ===== rainbow keyframes ===== */
+          @keyframes legoRainbow{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+          @keyframes brickRainbowFill{
             0%{fill:#ff0000}20%{fill:#ff7f00}40%{fill:#ffff00}
             60%{fill:#00ff00}80%{fill:#0000ff}100%{fill:#ff0000}
           }
 
-          /* desktop / Android – hue‑rotate filter */
-          g rect[data-level]:not([data-level="0"]){
+          /* ── desktop / Android ──  filter-based hue shift on the wrapper <g> */
+          g[data-level]:not([data-level="0"]){               /* skip spacer tiles    */
             animation:legoRainbow 4s linear infinite;
           }
 
-          /* iOS / Safari - override with *fill* animation               */
-          /* !important guarantees this wins over the earlier rule       */
+          /* ── iOS / Safari ──  fall back to animating the brick's *fill*      */
           @supports (-webkit-overflow-scrolling:touch){
-            g rect[data-level]:not([data-level="0"]){
-              animation:brickRainbowFill 4s linear infinite !important;
+            /* one rect per <g>; target that rect but still exclude spacer fill */
+            g[data-level]:not([data-level="0"]) rect[fill]:not([fill="none"]){
+              animation:brickRainbowFill 4s linear infinite;
             }
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+1){animation-delay:-0.8s !important}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+2){animation-delay:-1.6s !important}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+3){animation-delay:-2.4s !important}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+4){animation-delay:-3.2s !important}
+            /* stagger delays so neighbouring bricks don't all match */
+            g[data-level]:not([data-level="0"]) rect:nth-of-type(5n+1){animation-delay:-0.8s}
+            g[data-level]:not([data-level="0"]) rect:nth-of-type(5n+2){animation-delay:-1.6s}
+            g[data-level]:not([data-level="0"]) rect:nth-of-type(5n+3){animation-delay:-2.4s}
+            g[data-level]:not([data-level="0"]) rect:nth-of-type(5n+4){animation-delay:-3.2s}
           }
 
           /* extras */
@@ -57,12 +57,12 @@ jobs:
           .radar    {stroke-width:4px;fill:#0dff00;fill-opacity:.5;stroke:#ff0000}
           CSS
 
-          # splice the CSS block right after the first <style>
+          # splice the CSS block right after the first <style> element
           for svg in profile-3d-contrib/*.svg; do
             sed -i '/<style>/r '"$tmp" "$svg"
           done
 
-      - name: Push SVGs to output-3d-contrib branch
+      - name: Publish SVGs to output-3d-contrib branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output-3d-contrib
