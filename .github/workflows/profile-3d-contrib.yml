@@ -1,3 +1,4 @@
+# .github/workflows/profile-3d-contrib.yml
 name: generate 3d chart for profile contributions
 
 on:
@@ -10,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       # ── checkout ───────────────────────────────────────────────
       - name: Checkout repository
@@ -24,40 +26,42 @@ jobs:
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
       # ── splice rainbow CSS into every SVG ───────────────────────
-      - name: Inject CSS overrides (desktop + mobile)
+      - name: Inject CSS overrides (all browsers)
+        shell: bash
         run: |
           tmp=$(mktemp)
+
+          # ───────── CSS that will be inserted into each <style> ─────────
           cat >"$tmp"<<'CSS'
           /* ===== rainbow animation (hue-rotate filter) ===== */
-          @-webkit-keyframes legoRainbow {
-            0%   { -webkit-filter: hue-rotate(0deg);    filter: hue-rotate(0deg); }
-            100% { -webkit-filter: hue-rotate(360deg);  filter: hue-rotate(360deg); }
+          @-webkit-keyframes legoRainbow{
+            0%{ -webkit-filter:hue-rotate(0deg);  filter:hue-rotate(0deg); }
+            100%{ -webkit-filter:hue-rotate(360deg); filter:hue-rotate(360deg); }
           }
-          @keyframes legoRainbow {
-            0%   { -webkit-filter: hue-rotate(0deg);    filter: hue-rotate(0deg); }
-            100% { -webkit-filter: hue-rotate(360deg);  filter: hue-rotate(360deg); }
-          }
-
-          /* Apply rainbow filter animation to active contribution blocks */
-          g rect[data-level]:not([data-level="0"]) {
-            -webkit-animation: legoRainbow 4s linear infinite;
-                    animation: legoRainbow 4s linear infinite;
+          @keyframes legoRainbow{
+            0%{ -webkit-filter:hue-rotate(0deg);  filter:hue-rotate(0deg); }
+            100%{ -webkit-filter:hue-rotate(360deg); filter:hue-rotate(360deg); }
           }
 
-          /* (Optional) Staggered animation delays for a multi-phase rainbow */
-          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+1) { animation-delay: -0.8s; }
-          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+2) { animation-delay: -1.6s; }
-          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+3) { animation-delay: -2.4s; }
-          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+4) { animation-delay: -3.2s; }
-          /* Note: The above nth-of-type selectors distribute 5 different start phases.
-             They are optional; remove them if you prefer the unison animation. */
+          /* apply to every active brick (data-level 1-4) */
+          g rect[data-level]:not([data-level="0"]){
+            -webkit-animation:legoRainbow 4s linear infinite;
+                    animation:legoRainbow 4s linear infinite;
+          }
+
+          /* stagger start-times so neighbouring bricks differ */
+          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+1){animation-delay:-0.8s}
+          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+2){animation-delay:-1.6s}
+          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+3){animation-delay:-2.4s}
+          g rect[data-level]:not([data-level="0"]):nth-of-type(5n+4){animation-delay:-3.2s}
 
           /* extras (unchanged) */
-          .stroke-fg { stroke: #0000ff; }
-          .radar    { stroke-width:4px; fill:#0dff00; fill-opacity:.5; stroke:#ff0000; }
+          .stroke-fg{stroke:#0000ff}
+          .radar    {stroke-width:4px;fill:#0dff00;fill-opacity:.5;stroke:#ff0000}
           CSS
+          # ────────────────────────────────────────────────────────
 
-          # Insert the CSS block right after the first <style> tag in each SVG
+          # insert the CSS block right after the first <style> tag
           for svg in profile-3d-contrib/*.svg; do
             sed -i '/<style>/r '"$tmp" "$svg"
           done
