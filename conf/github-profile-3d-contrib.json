@@ -5,7 +5,7 @@
     "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
-    "weakColor": "#ffffff",
+    "weakColor": "#0d20a3",
     "radarColor": "#ff0000",
 
     "growingAnimation": true,
@@ -16,6 +16,12 @@
 
     "contribPatterns": [
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "none",
           "foregroundColor": "none",
@@ -27,7 +33,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -47,6 +53,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(140,100%,55%)",
           "foregroundColor": "hsl(140,100%,15%)",
@@ -58,7 +70,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -78,6 +90,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(210,100%,60%)",
           "foregroundColor": "hsl(210,100%,18%)",
@@ -89,7 +107,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -109,6 +127,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(280,100%,65%)",
           "foregroundColor": "hsl(280,100%,20%)",
@@ -120,7 +144,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -140,6 +164,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(350,100%,55%)",
           "foregroundColor": "hsl(350,100%,15%)",
@@ -151,7 +181,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -179,7 +209,7 @@
     "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
-    "weakColor": "#ffffff",
+    "weakColor": "#0d20a3",
     "radarColor": "#ff0000",
 
     "growingAnimation": true,
@@ -190,6 +220,12 @@
 
     "contribPatterns": [
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "none",
           "foregroundColor": "none",
@@ -201,7 +237,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -221,6 +257,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(140,100%,55%)",
           "foregroundColor": "hsl(140,100%,15%)",
@@ -232,7 +274,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -252,6 +294,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(210,100%,60%)",
           "foregroundColor": "hsl(210,100%,18%)",
@@ -263,7 +311,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -283,6 +331,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(280,100%,65%)",
           "foregroundColor": "hsl(280,100%,20%)",
@@ -294,7 +348,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
@@ -314,6 +368,12 @@
         }
       },
       {
+        "growingAnimation": true,
+        "saturation": "100%",
+        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "duration": "4s",
+        "hueRatio": -10,
+
         "top": {
           "backgroundColor": "hsl(350,100%,55%)",
           "foregroundColor": "hsl(350,100%,15%)",
@@ -325,7 +385,7 @@
             "0x01e001e0","0x00000000","0x00000000","0x00000000"
           ]
         },
-        "left":  {
+        "left": {
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x00000000","0x00000000",
