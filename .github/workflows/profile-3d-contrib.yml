@@ -1,66 +1,78 @@
+# .github/workflows/profile-3d-contrib.yml
 name: generate 3d chart for profile contributions
 
 on:
-  schedule:
-    - cron: '0 18 * * *'          # daily at 18 UTC
+  schedule:     # daily at 18 UTC
+    - cron: '0 18 * * *'
   workflow_dispatch:
   push: { branches: [ main ] }
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+    # ─────────────────────────────────────────────────────────
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Generate SVGs (day & night)
-        uses: yoshi389111/github-profile-3d-contrib@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME:      ${{ github.repository_owner }}
-          SETTING_JSON:  conf/github-profile-3d-contrib.json
+    # build day.svg / night.svg from your bitmap JSON
+    - name: Generate SVGs (day & night)
+      uses: yoshi389111/github-profile-3d-contrib@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        USERNAME:      ${{ github.repository_owner }}
+        SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      - name: Inject CSS overrides (rainbow + extras)
-        shell: bash
-        run: |
-          tmp=$(mktemp)
+    # splice rainbow CSS into every generated SVG
+    - name: Inject CSS overrides (desktop + iOS)
+      shell: bash
+      run: |
+        tmp=$(mktemp)
 
-          # ---------- CSS that will be inserted ----------
-          cat > "$tmp" <<'EOF'
-          /* ==== rainbow animation (filter for modern, fill for Safari) ==== */
-          @keyframes legoRainbow{0%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);}}
+        # ───── CSS that will be inserted into each <style> ─────
+        cat > "$tmp" <<'EOF'
+        /* ===== rainbow animation ===== */
+        @keyframes legoRainbow       {0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+        @keyframes brickRainbowFill  {
+          0%{fill:#ff0000} 20%{fill:#ff7f00} 40%{fill:#ffff00}
+          60%{fill:#00ff00} 80%{fill:#0000ff} 100%{fill:#ff0000}
+        }
 
-          @keyframes brickRainbowFill{
-            0%{fill:#ff0000;}20%{fill:#ff7f00;}40%{fill:#ffff00;}
-            60%{fill:#00ff00;}80%{fill:#0000ff;}100%{fill:#ff0000;}
+        /* desktop / Android – use hue‑rotate filter */
+        g rect[data-level]:not([data-level="0"]){
+          animation:legoRainbow 4s linear infinite;
+        }
+
+        /* Safari / iOS fallback – animate the *fill*   */
+        /* only bricks with data-level ≥1 … not spacer tiles */
+        @supports (-webkit-overflow-scrolling:touch){
+          g rect[data-level]:not([data-level="0"]){
+            animation:brickRainbowFill 4s linear infinite;
           }
+          /* stagger start‑times so neighbouring bricks differ */
+          g rect[data-level]:nth-of-type(5n+1){animation-delay:-.8s}
+          g rect[data-level]:nth-of-type(5n+2){animation-delay:-1.6s}
+          g rect[data-level]:nth-of-type(5n+3){animation-delay:-2.4s}
+          g rect[data-level]:nth-of-type(5n+4){animation-delay:-3.2s}
+        }
 
-          /* desktop + Android */
-          g rect{animation:legoRainbow 4s linear infinite;}
+        /* extras */
+        .stroke-fg{stroke:#0000ff}
+        .radar    {stroke-width:4px;fill:#0dff00;fill-opacity:.5;stroke:#ff0000}
+        EOF
+        # ──────────────────────────────────────────────────────
 
-          /* iOS / Safari fallback – animates fill, **with staggered delays** */
-          @supports(-webkit-overflow-scrolling:touch){
-            g rect{animation:brickRainbowFill 4s linear infinite;}
-            g rect:nth-of-type(5n+1){animation-delay:-.8s;}
-            g rect:nth-of-type(5n+2){animation-delay:-1.6s;}
-            g rect:nth-of-type(5n+3){animation-delay:-2.4s;}
-            g rect:nth-of-type(5n+4){animation-delay:-3.2s;}
-          }
+        # insert the CSS block right after the first <style> tag
+        for svg in profile-3d-contrib/*.svg; do
+          sed -i '/<style>/r '"$tmp" "$svg"
+        done
 
-          /* extras you asked for */
-          .stroke-fg{stroke:#0000ff;}
-          .radar{stroke-width:4px;fill:#0dff00;fill-opacity:0.5;stroke:#ff0000;}
-          EOF
-          # -------------------------------------------------------
-
-          for svg in profile-3d-contrib/*.svg; do
-            # insert CSS immediately after the *first* <style> tag
-            sed -i '/<style>/r '"$tmp" "$svg"
-          done
-
-      - name: Publish SVGs to output‑3d‑contrib branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output-3d-contrib
-          build_dir: profile-3d-contrib
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # publish finished SVGs
+    - name: Push SVGs to output‑3d‑contrib branch
+      uses: crazy-max/ghaction-github-pages@v3.1.0
+      with:
+        target_branch: output-3d-contrib
+        build_dir: profile-3d-contrib
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
