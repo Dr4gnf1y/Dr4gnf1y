@@ -1,0 +1,39 @@
+name: generate 3d chart for profile contributions
+
+on:
+  # daily at 18 UTC; tweak if you like
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:      # manual trigger button
+  push:
+    branches: [ main ]    # rebuild when you edit the JSON/settings
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate SVGs (day & night)
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME:      ${{ github.repository_owner }}
+          SETTING_JSON:  conf/github-profile-3d-contrib.json
+
+      # ---- OPTIONAL tweak ----
+      # add the blue outline you specified:  .stroke-fg { stroke:#0000ff; }
+      - name: Inject custom CSS into night.svg
+        run: |
+          sed -i '0,/<style>/a\
+          .stroke-fg { stroke: #0000ff; }' profile-3d-contrib/night.svg
+
+      # ---- Publish to a clean branch ----
+      - name: Push SVGs to output-3d-contrib branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output-3d-contrib
+          build_dir: profile-3d-contrib
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
