@@ -1,0 +1,33 @@
+{
+  // required ─ tells the generator which template to use
+  "type": "rainbow",
+
+  // required ─ this will be the only file produced
+  "fileName": "profile-night-rainbow.svg",
+
+  /* ----------  colours that appear in the <style> block ---------- */
+
+  "backgroundColor": "#00000f",          // .fill-bg
+  "foregroundColor": "#0dff00",          // .fill-fg
+  "strongColor":   "#ff0000",            // .fill-strong
+  "weakColor":     "#aaaaaa",            // .fill-weak /.stroke-weak
+  "radarColor":    "#ff0000",            // .radar + .stroke-fg
+
+  /* ----------  animation & palette ---------- */
+
+  "growingAnimation": true,
+  "saturation": "50%",
+  "contribLightness": ["20%","30%","35%","40%","50%"],
+  "duration": "10s",
+  "hueRatio": -7
+
+  /* optional: dark‑mode overrides shown in docs ≥ 0.9.0
+  "darkMode": {
+    "backgroundColor": "#00000f",
+    "foregroundColor": "#0dff00",
+    "strongColor": "#ff0000",
+    "weakColor": "#aaaaaa",
+    "radarColor": "#ff0000"
+  }
+  */
+}
