@@ -1,8 +1,6 @@
 {
-  // required ─ tells the generator which template to use
   "type": "rainbow",
 
-  // required ─ this will be the only file produced
   "fileName": "profile-night-rainbow.svg",
 
   /* ----------  colours that appear in the <style> block ---------- */
