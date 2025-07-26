@@ -12,11 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # ── checkout ───────────────────────────────────────────────
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ── build day.svg / night.svg from your bitmap JSON ────────
       - name: Generate SVGs (day & night)
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
@@ -24,51 +22,46 @@ jobs:
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      # ── splice rainbow CSS into every SVG ───────────────────────
       - name: Inject CSS overrides (desktop + iOS)
         shell: bash
         run: |
           tmp=$(mktemp)
 
-          # ───── CSS that will be inserted into each <style> ─────
-          cat > "$tmp" <<'CSS'
+          cat >"$tmp"<<'CSS'
           /* ===== rainbow animation ===== */
-          @keyframes legoRainbow{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
-          @keyframes brickRainbowFill{
+          @keyframes legoRainbow      {0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+          @keyframes brickRainbowFill {
             0%{fill:#ff0000}20%{fill:#ff7f00}40%{fill:#ffff00}
             60%{fill:#00ff00}80%{fill:#0000ff}100%{fill:#ff0000}
           }
 
-          /* desktop / Android - hue-rotate filter
-             (only bricks with data-level ≥1) */
+          /* desktop / Android – hue‑rotate filter */
           g rect[data-level]:not([data-level="0"]){
             animation:legoRainbow 4s linear infinite;
           }
 
-          /* iOS / Safari - animate *fill* instead of filter */
+          /* iOS / Safari - override with *fill* animation               */
+          /* !important guarantees this wins over the earlier rule       */
           @supports (-webkit-overflow-scrolling:touch){
             g rect[data-level]:not([data-level="0"]){
-              animation:brickRainbowFill 4s linear infinite;
+              animation:brickRainbowFill 4s linear infinite !important;
             }
-            /* stagger start-times so neighbouring bricks differ */
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+1){animation-delay:-0.8s}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+2){animation-delay:-1.6s}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+3){animation-delay:-2.4s}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+4){animation-delay:-3.2s}
+            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+1){animation-delay:-0.8s !important}
+            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+2){animation-delay:-1.6s !important}
+            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+3){animation-delay:-2.4s !important}
+            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+4){animation-delay:-3.2s !important}
           }
 
           /* extras */
           .stroke-fg{stroke:#0000ff}
-          .radar{stroke-width:4px;fill:#0dff00;fill-opacity:.5;stroke:#ff0000}
+          .radar    {stroke-width:4px;fill:#0dff00;fill-opacity:.5;stroke:#ff0000}
           CSS
-          # ──────────────────────────────────────────────────────
 
-          # insert the CSS block right after the first <style> tag
+          # splice the CSS block right after the first <style>
           for svg in profile-3d-contrib/*.svg; do
             sed -i '/<style>/r '"$tmp" "$svg"
           done
 
-      # ── publish finished SVGs ──────────────────────────────────
       - name: Push SVGs to output-3d-contrib branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
