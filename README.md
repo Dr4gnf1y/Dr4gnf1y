@@ -25,5 +25,15 @@
 ![Rays GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dr4gnf1y&show_icons=true&theme=shadow_red)
 
 <br>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Dr4gnf1y/Dr4gnf1y/output-3d-contrib/night.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dr4gnf1y/Dr4gnf1y/output-3d-contrib/day.svg" />
+    <img alt="GitHub contribution graph in 3‑D" src="https://raw.githubusercontent.com/Dr4gnf1y/Dr4gnf1y/output-3d-contrib/day.svg" />
+  </picture>
+</p>
+
+
+<br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
