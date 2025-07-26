@@ -13,7 +13,7 @@
   "saturation": "50%",
   "contribLightness": ["20%","30%","35%","40%","50%"],
   "duration": "10s",
-  "hueRatio": -7
+  "hueRatio": -7,
 
   "darkMode": {
     "backgroundColor": "#00000f",
