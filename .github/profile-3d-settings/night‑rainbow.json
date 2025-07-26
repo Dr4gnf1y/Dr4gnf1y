@@ -15,7 +15,6 @@
   "duration": "10s",
   "hueRatio": -7
 
-  /* optional: dark‑mode overrides shown in docs ≥ 0.9.0
   "darkMode": {
     "backgroundColor": "#00000f",
     "foregroundColor": "#0dff00",
