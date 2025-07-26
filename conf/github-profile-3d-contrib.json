@@ -23,7 +23,7 @@
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
     "weakColor": "#aaaaaa",
-    "radarColor": "#0dff00",
+    "radarColor": "#ff0000",
     "growingAnimation": true,
     "saturation": "50%",
     "contribLightness": ["20%", "30%", "35%", "40%", "50%"],
