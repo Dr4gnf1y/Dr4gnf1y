@@ -5,12 +5,12 @@
     "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
-    "weakColor": "#0d20a3",
+    "weakColor": "#177409",
     "radarColor": "#ff0000",
 
     "growingAnimation": true,
     "saturation": "100%",
-    "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+    "contribLightness": ["40%","50%","55%","60%","70%"],
     "duration": "4s",
     "hueRatio": -10,
 
@@ -18,7 +18,7 @@
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -52,10 +52,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -89,10 +90,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -126,10 +128,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -163,10 +166,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -209,12 +213,12 @@
     "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
-    "weakColor": "#0d20a3",
+    "weakColor": "#177409",
     "radarColor": "#ff0000",
 
     "growingAnimation": true,
     "saturation": "100%",
-    "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+    "contribLightness": ["40%","50%","55%","60%","70%"],
     "duration": "4s",
     "hueRatio": -10,
 
@@ -222,7 +226,7 @@
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -256,10 +260,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -293,10 +298,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -330,10 +336,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
@@ -367,10 +374,11 @@
           ]
         }
       },
+
       {
         "growingAnimation": true,
         "saturation": "100%",
-        "contribLightness": ["40%", "50%", "55%", "60%", "70%"],
+        "contribLightness": ["40%","50%","55%","60%","70%"],
         "duration": "4s",
         "hueRatio": -10,
 
