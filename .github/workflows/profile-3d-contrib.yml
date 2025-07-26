@@ -4,18 +4,14 @@ on:
   schedule:
     - cron: '0 18 * * *'          # daily at 18 UTC
   workflow_dispatch:
-  push:
-    branches: [ main ]
+  push: { branches: [ main ] }
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # ── checkout ───────────────────────────────────────────────
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # ── build LEGO‑style SVGs from your bitmap JSON ────────────
       - name: Generate SVGs (day & night)
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
@@ -23,7 +19,6 @@ jobs:
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      # ── splice rainbow CSS & tweaks into every SVG ─────────────
       - name: Inject CSS overrides (rainbow + extras)
         shell: bash
         run: |
@@ -31,6 +26,7 @@ jobs:
 
           # ---------- CSS that will be inserted ----------
           cat > "$tmp" <<'EOF'
+          /* ==== rainbow animation (filter for modern, fill for Safari) ==== */
           @keyframes legoRainbow{0%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);}}
 
           @keyframes brickRainbowFill{
@@ -38,17 +34,19 @@ jobs:
             60%{fill:#00ff00;}80%{fill:#0000ff;}100%{fill:#ff0000;}
           }
 
-          /* Desktop + modern Android */
+          /* desktop + Android */
           g rect{animation:legoRainbow 4s linear infinite;}
 
-          /* iOS / Safari fallback – animates fill instead of filter */
+          /* iOS / Safari fallback – animates fill, **with staggered delays** */
           @supports(-webkit-overflow-scrolling:touch){
-            g *[fill]:not([fill="none"]){
-              animation:brickRainbowFill 4s linear infinite;
-            }
+            g rect{animation:brickRainbowFill 4s linear infinite;}
+            g rect:nth-of-type(5n+1){animation-delay:-.8s;}
+            g rect:nth-of-type(5n+2){animation-delay:-1.6s;}
+            g rect:nth-of-type(5n+3){animation-delay:-2.4s;}
+            g rect:nth-of-type(5n+4){animation-delay:-3.2s;}
           }
 
-          /* extra tweaks */
+          /* extras you asked for */
           .stroke-fg{stroke:#0000ff;}
           .radar{stroke-width:4px;fill:#0dff00;fill-opacity:0.5;stroke:#ff0000;}
           EOF
@@ -59,7 +57,6 @@ jobs:
             sed -i '/<style>/r '"$tmp" "$svg"
           done
 
-      # ── publish finished SVGs to a clean branch ────────────────
       - name: Publish SVGs to output‑3d‑contrib branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
