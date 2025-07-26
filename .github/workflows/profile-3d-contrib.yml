@@ -40,7 +40,7 @@ jobs:
             animation:legoRainbow 4s linear infinite;
           }
 
-          /* iOS / Safari - override with *fill* animation               */
+          /* iOS / Safari  override with *fill* animation               */
           /* !important guarantees this wins over the earlier rule       */
           @supports (-webkit-overflow-scrolling:touch){
             g rect[data-level]:not([data-level="0"]){
