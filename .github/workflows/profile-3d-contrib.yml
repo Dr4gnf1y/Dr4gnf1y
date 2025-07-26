@@ -24,10 +24,15 @@ jobs:
 
       # ---- OPTIONAL tweak ----
       # add the blue outline you specified:  .stroke-fg { stroke:#0000ff; }
-      - name: Inject custom CSS into night.svg
+      - name: Inject custom CSS that the generator can’t set
         run: |
-          sed -i '0,/<style>/a\
-          .stroke-fg { stroke: #0000ff; }' profile-3d-contrib/night.svg
+          for svg in profile-3d-contrib/*.svg; do
+            sed -i '0,/<style>/a\
+            /* overrides */\
+            .stroke-fg{stroke:#0000ff;}\
+            .radar{stroke-width:4px;fill:#0dff00;fill-opacity:0.5;stroke:#ff0000;}\
+            ' "$svg"
+          done
 
       # ---- Publish to a clean branch ----
       - name: Push SVGs to output-3d-contrib branch
