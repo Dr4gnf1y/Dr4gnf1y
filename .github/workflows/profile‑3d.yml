@@ -1,4 +1,4 @@
-name: GitHub‑Profile‑3D‑Contrib
+name: GitHub-Profile-3D-Contrib
 
 on:
   schedule:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run 3D‑Contrib generator
+      - name: Run 3D-Contrib generator
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
