@@ -3,15 +3,11 @@
 
   "fileName": "profile-night-rainbow.svg",
 
-  /* ----------  colours that appear in the <style> block ---------- */
-
-  "backgroundColor": "#00000f",          // .fill-bg
-  "foregroundColor": "#0dff00",          // .fill-fg
-  "strongColor":   "#ff0000",            // .fill-strong
-  "weakColor":     "#aaaaaa",            // .fill-weak /.stroke-weak
-  "radarColor":    "#ff0000",            // .radar + .stroke-fg
-
-  /* ----------  animation & palette ---------- */
+  "backgroundColor": "#00000f",
+  "foregroundColor": "#0dff00",
+  "strongColor":   "#ff0000",
+  "weakColor":     "#aaaaaa",
+  "radarColor":    "#ff0000",
 
   "growingAnimation": true,
   "saturation": "50%",
