@@ -1,12 +1,12 @@
 name: GitHub‑Profile‑3D‑Contrib
 
 on:
-  schedule:        # every day at 18:00 UTC – change if you like
+  schedule:
     - cron:  "0 18 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write         # required for the commit step
+  contents: write
 
 jobs:
   build:
@@ -22,10 +22,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME:      ${{ github.repository_owner }}
-          # 👉 Point to YOUR custom JSON
           SETTING_JSON:  .github/profile-3d-settings/night-rainbow.json
 
-      # ---- keep the folder clean so no other SVGs are left behind ----
       - name: Delete any SVG except the one we want
         run: |
           find profile-3d-contrib -type f -name '*.svg' ! -name 'profile-night-rainbow.svg' -delete
