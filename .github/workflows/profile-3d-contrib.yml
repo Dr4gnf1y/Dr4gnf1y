@@ -2,9 +2,9 @@ name: generate 3d chart for profile contributions
 
 on:
   schedule:
-    - cron: "0 18 * * *"
-  workflow_dispatch:
-  push:
+    - cron: "0 18 * * *"          # daily at 18 UTC
+  workflow_dispatch:              # manual trigger
+  push:                           # rebuild when JSON changes
     branches: [ main ]
 
 jobs:
@@ -13,22 +13,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate SVGs (day & night)
+      - name: Generate SVGs
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      - name: Inject CSS for radar, outline and rainbow hue-rotate
+      - name: Inject CSS overrides (brick‑rainbow + extras)
+        shell: bash
         run: |
+          tmp=$(mktemp)
+
+          cat >"$tmp"<<'CSS'
+          @keyframes brickRainbow {
+            0%   { fill:#ff0000; }
+            20%  { fill:#ff7f00; }
+            40%  { fill:#ffff00; }
+            60%  { fill:#00ff00; }
+            80%  { fill:#0000ff; }
+            100% { fill:#ff0000; }
+          }
+          g rect         { animation:brickRainbow 4s linear infinite; }
+          .stroke-fg     { stroke:#0000ff; }
+          .radar         { stroke-width:4px; fill:#0dff00; fill-opacity:0.5; stroke:#ff0000; }
+          CSS
+
           for svg in profile-3d-contrib/*.svg; do
-            sed -i '0,/<style>/a\
-            @keyframes legoRainbow{0%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);} }\
-            g rect{animation:legoRainbow 4s linear infinite;}\
-            .stroke-fg{stroke:#0000ff;}\
-            .radar{stroke-width:4px;fill:#0dff00;fill-opacity:0.5;stroke:#ff0000;}\
-            ' "$svg"
+            # insert CSS right after the first <style> tag
+            sed -i '/<style>/r '"$tmp" "$svg"
           done
 
       - name: Push SVGs to output-3d-contrib branch
