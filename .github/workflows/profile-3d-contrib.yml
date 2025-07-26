@@ -20,7 +20,7 @@ jobs:
           USERNAME:      ${{ github.repository_owner }}
           SETTING_JSON:  conf/github-profile-3d-contrib.json
 
-      - name: Inject CSS for radar, outline and rainbow hue‑rotate
+      - name: Inject CSS for radar, outline and rainbow hue-rotate
         run: |
           for svg in profile-3d-contrib/*.svg; do
             sed -i '0,/<style>/a\
