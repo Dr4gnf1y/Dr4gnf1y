@@ -19,15 +19,15 @@
   {
     "type": "rainbow",
     "fileName": "night.svg",
-    "backgroundColor": "#00000f",
+    "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
     "weakColor": "#aaaaaa",
-    "radarColor": "#ff0000",
+    "radarColor": "#0dff00",
     "growingAnimation": true,
     "saturation": "50%",
     "contribLightness": ["20%", "30%", "35%", "40%", "50%"],
-    "duration": "10s",
+    "duration": "4s",
     "hueRatio": -7
   }
 ]
