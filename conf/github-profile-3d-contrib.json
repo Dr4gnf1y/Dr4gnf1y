@@ -17,8 +17,8 @@
     "contribPatterns": [
       {
         "top": {
-          "backgroundColor": "#f8f8f8",
-          "foregroundColor": "#aaaaaa",
+          "backgroundColor": "none",
+          "foregroundColor": "none",
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x01c001c0","0x06300630",
@@ -191,8 +191,8 @@
     "contribPatterns": [
       {
         "top": {
-          "backgroundColor": "#f8f8f8",
-          "foregroundColor": "#aaaaaa",
+          "backgroundColor": "none",
+          "foregroundColor": "none",
           "width": 32,
           "bitmap": [
             "0x00000000","0x00000000","0x01c001c0","0x06300630",
