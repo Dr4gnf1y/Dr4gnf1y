@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v4
 
     # build day.svg / night.svg from your bitmap JSON
-    - name: Generate SVGs (day & night)
+    - name: Generate SVGs (day & night)
       uses: yoshi389111/github-profile-3d-contrib@latest
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,7 +25,7 @@ jobs:
         SETTING_JSON:  conf/github-profile-3d-contrib.json
 
     # splice rainbow CSS into every generated SVG
-    - name: Inject CSS overrides (desktop + iOS)
+    - name: Inject CSS overrides (desktop + iOS)
       shell: bash
       run: |
         tmp=$(mktemp)
@@ -39,18 +39,18 @@ jobs:
           60%{fill:#00ff00} 80%{fill:#0000ff} 100%{fill:#ff0000}
         }
 
-        /* desktop / Android – use hue‑rotate filter */
+        /* desktop / Android - use hue-rotate filter */
         g rect[data-level]:not([data-level="0"]){
           animation:legoRainbow 4s linear infinite;
         }
 
-        /* Safari / iOS fallback – animate the *fill*   */
+        /* Safari / iOS fallback - animate the *fill*   */
         /* only bricks with data-level ≥1 … not spacer tiles */
         @supports (-webkit-overflow-scrolling:touch){
           g rect[data-level]:not([data-level="0"]){
             animation:brickRainbowFill 4s linear infinite;
           }
-          /* stagger start‑times so neighbouring bricks differ */
+          /* stagger start-times so neighbouring bricks differ */
           g rect[data-level]:nth-of-type(5n+1){animation-delay:-.8s}
           g rect[data-level]:nth-of-type(5n+2){animation-delay:-1.6s}
           g rect[data-level]:nth-of-type(5n+3){animation-delay:-2.4s}
@@ -69,7 +69,7 @@ jobs:
         done
 
     # publish finished SVGs
-    - name: Push SVGs to output‑3d‑contrib branch
+    - name: Push SVGs to output-3d-contrib branch
       uses: crazy-max/ghaction-github-pages@v3.1.0
       with:
         target_branch: output-3d-contrib
