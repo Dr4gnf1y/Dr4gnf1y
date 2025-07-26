@@ -5,7 +5,7 @@
     "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
-    "weakColor": "#aaaaaa",
+    "weakColor": "#000000",
     "radarColor": "#ff0000",
 
     "growingAnimation": true,
@@ -179,7 +179,7 @@
     "backgroundColor": "none",
     "foregroundColor": "#0dff00",
     "strongColor": "#ff0000",
-    "weakColor": "#aaaaaa",
+    "weakColor": "#000000",
     "radarColor": "#ff0000",
 
     "growingAnimation": true,
