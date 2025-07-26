@@ -1,4 +1,3 @@
-# .github/workflows/profile-3d-contrib.yml
 name: generate 3d chart for profile contributions
 
 on:
@@ -39,22 +38,21 @@ jobs:
             60%{fill:#00ff00}80%{fill:#0000ff}100%{fill:#ff0000}
           }
 
-          /* desktop / Android - hue-rotate filter
-             (only bricks with data-level ≥1) */
-          g rect[data-level]:not([data-level="0"]){
+          /* desktop / Android - hue-rotate filter */
+          g rect[fill]:not([fill="none"]){
             animation:legoRainbow 4s linear infinite;
           }
 
           /* iOS / Safari - animate *fill* instead of filter */
           @supports (-webkit-overflow-scrolling:touch){
-            g rect[data-level]:not([data-level="0"]){
+            g rect[fill]:not([fill="none"]){
               animation:brickRainbowFill 4s linear infinite;
             }
             /* stagger start-times so neighbouring bricks differ */
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+1){animation-delay:-0.8s}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+2){animation-delay:-1.6s}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+3){animation-delay:-2.4s}
-            g rect[data-level]:not([data-level="0"]):nth-of-type(5n+4){animation-delay:-3.2s}
+            g rect[fill]:not([fill="none"]):nth-of-type(5n+1){animation-delay:-0.8s}
+            g rect[fill]:not([fill="none"]):nth-of-type(5n+2){animation-delay:-1.6s}
+            g rect[fill]:not([fill="none"]):nth-of-type(5n+3){animation-delay:-2.4s}
+            g rect[fill]:not([fill="none"]):nth-of-type(5n+4){animation-delay:-3.2s}
           }
 
           /* extras */
