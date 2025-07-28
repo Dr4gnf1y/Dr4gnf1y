@@ -2,7 +2,7 @@ name: generate 3d chart for profile contributions
 
 on:
   schedule:          # every 15 minutes (UTC)
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
   push:
     branches: [ main ]
