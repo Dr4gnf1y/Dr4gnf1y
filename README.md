@@ -11,8 +11,6 @@
 
 <br>
 
-<br>
-
 [![My Certifications](https://svg-banners.vercel.app/api?type=luminance&text1=My%20Certifications&width=125&height=30)](https://github.com/TreadSoftly/Projects)• [![Security+](https://gradgen.boris.sh/badge/Security%2B/Certified?gradient=ff0059,ff0000&style=for-the-badge)](https://www.comptia.org/certifications/security)
 [![AWS CCP](https://gradgen.boris.sh/badge/AWS/Cloud%20Practitioner?gradient=ff9900,ff5e00&style=for-the-badge)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 [![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
@@ -22,15 +20,23 @@
 
 <br>
 
+<br> 
+
 [![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=e67e00&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FrAIn;Check+It+Out)](https://github.com/TreadSoftly/AWS/tree/main/projects/drone-vision)
+
+<br>
+
+<br>
 
 ### 🔗 Linkup with me at: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
 
 <br>
 
+<br>
+
 ![Rays GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dr4gnf1y&show_icons=true&theme=shadow_red)
 
-<br>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Dr4gnf1y/Dr4gnf1y/output-3d-contrib/night.svg" />
@@ -42,6 +48,7 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
 
