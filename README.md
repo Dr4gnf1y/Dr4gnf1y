@@ -16,7 +16,11 @@
 [![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
 
 ## 📌 Check out my Projects:
-[![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=800300&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FProjects;Click+To+Open)](https://github.com/TreadSoftly/Projects) [![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=e67e00&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FrAIn;Check+It+Out)](https://github.com/TreadSoftly/AWS/tree/main/projects/drone-vision)
+[![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=800300&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FProjects;Click+To+Open)](https://github.com/TreadSoftly/Projects) 
+
+<br>
+
+[![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=e67e00&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FrAIn;Check+It+Out)](https://github.com/TreadSoftly/AWS/tree/main/projects/drone-vision)
 
 ### 🔗 Linkup with me at: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
 
@@ -36,4 +40,5 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
