@@ -11,6 +11,8 @@
 
 <br>
 
+<br>
+
 [![My Certifications](https://svg-banners.vercel.app/api?type=luminance&text1=My%20Certifications&width=125&height=30)](https://github.com/TreadSoftly/Projects)• [![Security+](https://gradgen.boris.sh/badge/Security%2B/Certified?gradient=ff0059,ff0000&style=for-the-badge)](https://www.comptia.org/certifications/security)
 [![AWS CCP](https://gradgen.boris.sh/badge/AWS/Cloud%20Practitioner?gradient=ff9900,ff5e00&style=for-the-badge)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 [![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
@@ -40,5 +42,6 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
