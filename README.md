@@ -15,23 +15,42 @@
 [![AWS CCP](https://gradgen.boris.sh/badge/AWS/Cloud%20Practitioner?gradient=ff9900,ff5e00&style=for-the-badge)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 [![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
 
+<br>
+
 <div align="center">
 
 ## 📌 Check Out Some Of My Projects:
 
+<br>
+
+<table style="border-collapse:separate;border-spacing:18px;">
+  <tr>
+    <td align="center" style="border:2px solid #444;border-radius:10px;padding:14px;">
+      <a href="https://github.com/TreadSoftly/Projects">
+        <img src="https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=800300&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FProjects;Click+To+Open" alt="TreadSoftly Projects badge">
+      </a>
+    </td>
+    <td align="center" style="border:2px solid #444;border-radius:10px;padding:14px;">
+      <a href="https://github.com/TreadSoftly/AWS/tree/main/projects/drone-vision">
+        <img src="https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=e67e00&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FrAIn;Check+It+Out" alt="TreadSoftly rAIn badge">
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<br>
+
 <div align="center">
-
-[![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=800300&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FProjects;Click+To+Open)](https://github.com/TreadSoftly/Projects)
-
-<br><br>
-
-[![Projects — live badge](https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=e67e00&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FrAIn;Check+It+Out)](https://github.com/TreadSoftly/AWS/tree/main/projects/drone-vision)
-
-<br><br>
 
 ### 🔗 Link Up With Me @: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
 
-<br><br>
+<br>
+
+<br>
+
+<div align="center">
 
 ![Rays GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dr4gnf1y&show_icons=true&theme=shadow_red)
 
@@ -50,6 +69,7 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
 
