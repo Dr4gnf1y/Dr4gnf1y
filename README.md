@@ -2,23 +2,21 @@
 
 ![I'm Ray – Marine Veteran, AWS Cloud Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=25&pause=5500&color=00b304&center=true&vCenter=true&width=1050&height=90&lines=I%27m+Ray+%E2%80%93+Marine+Veteran,+AWS+Cloud+Engineer+%26+All+Around+Nerd!)
 
+##
+
 <div align="center">
 
 <h3 style="text-decoration:underline;">🧐 Focusing On</h3>
 
-<div align="center">
-
-<table style="display:inline-block;text-align:left;border-collapse:collapse;">
+<table align="center" style="margin:0 auto;text-align:left;border-collapse:collapse;">
   <tr><td style="padding:0 .6em;">•</td><td>Security Architecture</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>AI &amp; Machine Learning</td></tr>
-  <tr><td style="padding:0 .6em;">•</td><td>Drone Capabilities</td></tr>
+  <tr><td style="padding:0 .6em;">•</td><td>Drone Capabilities (Part 107)</td></tr>
 </table>
-
-<div align="center">
 
 <h3 style="text-decoration:underline;">📖 Currently Studying AWS Cloud Certs</h3>
 
-<table style="display:inline-block;text-align:left;border-collapse:collapse;">
+<table align="center" style="margin:0 auto;text-align:left;border-collapse:collapse;">
   <tr><td style="padding:0 .6em;">•</td><td>Solutions Architect</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>Security Specialty</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>AI Practitioner</td></tr>
@@ -27,11 +25,9 @@
 
 </div>
 
-
-
-<br>
-
 <div align="center">
+
+##
 
 ### [![My Certifications](https://svg-banners.vercel.app/api?type=luminance&text1=My%20Certifications&width=125&height=30)](https://github.com/TreadSoftly/Projects)
 
@@ -39,11 +35,13 @@
 [![AWS CCP](https://gradgen.boris.sh/badge/AWS/Cloud%20Practitioner?gradient=ff9900,ff5e00&style=for-the-badge)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 [![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
 
+##
+
 <br>
 
 <div align="center">
 
-## 🧰 Check Out Some Of My Projects:
+### 🧰 Check Out Some Of My Projects:
 
 <table style="border-collapse:separate;border-spacing:18px;">
   <tr>
@@ -91,6 +89,7 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
 
