@@ -8,6 +8,8 @@
 
 <h3 style="text-decoration:underline;">🧐 Focusing On</h3>
 
+<div align="center">
+
 <table align="center" style="margin:0 auto;text-align:left;border-collapse:collapse;">
   <tr><td style="padding:0 .6em;">•</td><td>Security Architecture</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>AI &amp; Machine Learning</td></tr>
@@ -15,6 +17,8 @@
 </table>
 
 <h3 style="text-decoration:underline;">📖 Currently Studying AWS Cloud Certs</h3>
+
+<div align="center">
 
 <table align="center" style="margin:0 auto;text-align:left;border-collapse:collapse;">
   <tr><td style="padding:0 .6em;">•</td><td>Solutions Architect</td></tr>
@@ -41,7 +45,7 @@
 
 <div align="center">
 
-### 🧰 Check Out Some Of My Projects:
+### 👇 Check Out Some Of My Projects
 
 <table style="border-collapse:separate;border-spacing:18px;">
   <tr>
