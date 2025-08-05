@@ -6,11 +6,15 @@
 
 <h3 style="text-decoration:underline;">🧐 Focusing On</h3>
 
+<div align="center">
+
 <table style="display:inline-block;text-align:left;border-collapse:collapse;">
   <tr><td style="padding:0 .6em;">•</td><td>Security Architecture</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>AI &amp; Machine Learning</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>Drone Capabilities</td></tr>
 </table>
+
+<div align="center">
 
 <h3 style="text-decoration:underline;">📖 Currently Studying AWS Cloud Certs</h3>
 
@@ -87,6 +91,7 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
 
