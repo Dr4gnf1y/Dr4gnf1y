@@ -6,7 +6,7 @@
 ### 🧐 Focusing On:
 - `Security`,&nbsp;`AI/ML` &&nbsp;`Part 107 Drone capabilities.`<br>
 
-### 👨‍🏫 Currently studying AWS Cloud certs:<br>
+### 📖 Currently studying AWS Cloud certs:<br>
  - `Solutions Architect`,&nbsp;`Security Specialty`,&nbsp;`AI Practitioner` &&nbsp;`Machine Learning`<br>
 
 <br>
@@ -19,7 +19,7 @@
 
 <div align="center">
 
-## 📌 Check Out Some Of My Projects:
+## 🧰 Check Out Some Of My Projects:
 
 <table style="border-collapse:separate;border-spacing:18px;">
   <tr>
