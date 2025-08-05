@@ -6,7 +6,7 @@
 ### 🧐 Focusing On:
 - `Security`,&nbsp;`AI/ML` &&nbsp;`Part 107 Drone capabilities.`<br>
 
-### 📖 Currently studying AWS Cloud certs:<br>
+### 📖 Currently Studying AWS Cloud Certs:<br>
  - `Solutions Architect`,&nbsp;`Security Specialty`,&nbsp;`AI Practitioner` &&nbsp;`Machine Learning`<br>
 
 <br>
