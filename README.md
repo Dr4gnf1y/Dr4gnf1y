@@ -55,7 +55,7 @@
       </a>
     </td>
     <td align="center" style="border:2px solid #444;border-radius:10px;padding:14px;">
-      <a href="https://github.com/TreadSoftly/AWS/tree/main/projects/drone-vision">
+      <a href="https://github.com/TreadSoftly/rAIn/blob/main/README.md">
         <img src="https://readme-typing-svg.demolab.com/?font=Orbitron&weight=700&size=28&pause=800&color=e67e00&center=true&vCenter=true&width=380&height=45&lines=TreadSoftly%2FrAIn;Check+It+Out" alt="TreadSoftly rAIn badge">
       </a>
     </td>
@@ -93,6 +93,7 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
 
