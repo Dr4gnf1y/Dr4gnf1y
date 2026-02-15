@@ -97,13 +97,14 @@
 ##
 
 
-<br>
+<!-- <br>
 
 <div align="center">
 
-### 🔗 Link Up With Me @: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
+### 🔗 Link Up With Me @: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
 
-<br>
+<br> -->
+
 
 
 
