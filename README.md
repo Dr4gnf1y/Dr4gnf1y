@@ -74,11 +74,11 @@
 
 <br>
 
-<div align="center">
+<!-- <div align="center">
 
 ![Rays GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dr4gnf1y&show_icons=true&theme=shadow_red)
 
-</div>
+</div> -->
 
 
 
@@ -93,6 +93,7 @@
 <br>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
 
 
 
