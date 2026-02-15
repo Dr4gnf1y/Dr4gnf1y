@@ -1,4 +1,4 @@
-## Hello and welcome, it's nice you're here. I'm Ray:
+## Hello and welcome, it's nice you're here. Quickly about myself & what you'll find here:
 
 ![USMC Veteran, Cyber/AI/Cloud/Network Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=25&pause=4700&color=00b304&center=true&vCenter=true&width=1050&height=40&lines=+USMC+Veteran,+Cyber/AI/Cloud+Engineer+%26+All+Around+Nerd!)
 
@@ -36,7 +36,7 @@
 
 <div align="center">
 
-### 👇Check Out Some Projects☢️
+### 👇Check Out Some Projects👇
 
 <table style="border-collapse:separate;border-spacing:18px;">
   <tr>
@@ -104,6 +104,7 @@
 ### 🔗 Link Up With Me @: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
 
 <br> -->
+
 
 
 
