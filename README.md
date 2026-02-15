@@ -1,6 +1,6 @@
-## Howdy 🤙
+## Hello and welcome, I'm Ray. It's nice you're here.
 
-![I'm Ray – Marine Veteran, AWS Cloud Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=25&pause=5500&color=00b304&center=true&vCenter=true&width=1050&height=90&lines=I%27m+Ray+%E2%80%93+Marine+Veteran,+AWS+Cloud+Engineer+%26+All+Around+Nerd!)
+![USMC Veteran, Cyber/AI/Cloud/Network Engineer & All Around Nerd!](https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=700&size=25&pause=5500&color=00b304&center=true&vCenter=true&width=1050&height=90&lines=+USMC+Veteran,+Cyber/AI/Cloud+Engineer+%26+All+Around+Nerd!)
 
 ##
 
@@ -11,12 +11,12 @@
 <div align="center">
 
 <table align="center" style="margin:0 auto;text-align:left;border-collapse:collapse;">
-  <tr><td style="padding:0 .6em;">•</td><td>Security Architecture</td></tr>
+  <tr><td style="padding:0 .6em;">•</td><td>Security Categories & Projects</td></tr>
   <tr><td style="padding:0 .6em;">•</td><td>AI &amp; Machine Learning</td></tr>
-  <tr><td style="padding:0 .6em;">•</td><td>Drone Capabilities (Part 107)</td></tr>
+  <tr><td style="padding:0 .6em;">•</td><td>Drone Capabilities & (Part 107)</td></tr>
 </table>
 
-<h3 style="text-decoration:underline;">📖 Currently Studying AWS Cloud Certs</h3>
+<!-- <h3 style="text-decoration:underline;">📖 Current Open Source Projects~</h3>
 
 <div align="center">
 
@@ -29,17 +29,7 @@
 
 </div>
 
-<div align="center">
-
-##
-
-### [![My Certifications](https://svg-banners.vercel.app/api?type=luminance&text1=My%20Certifications&width=125&height=30)](https://github.com/TreadSoftly/Projects)
-
-[![Security+](https://gradgen.boris.sh/badge/Security%2B/Certified?gradient=ff0059,ff0000&style=for-the-badge)](https://www.comptia.org/certifications/security)
-[![AWS CCP](https://gradgen.boris.sh/badge/AWS/Cloud%20Practitioner?gradient=ff9900,ff5e00&style=for-the-badge)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
-[![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
-
-##
+############################################################################################################### -->
 
 <br>
 
@@ -64,13 +54,11 @@
 
 </div>
 
-<br>
 
 <div align="center">
 
-### 🔗 Link Up With Me @: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
+##
 
-<br>
 
 <br>
 
@@ -96,8 +84,25 @@
 
 
 
+<br>
 
 
+### [![My Certifications](https://svg-banners.vercel.app/api?type=luminance&text1=My%20Certifications&width=125&height=30)](https://github.com/TreadSoftly/Projects)
+
+[![Security+](https://gradgen.boris.sh/badge/Security%2B/Certified?gradient=ff0059,ff0000&style=for-the-badge)](https://www.comptia.org/certifications/security)
+[![AWS CCP](https://gradgen.boris.sh/badge/AWS/Cloud%20Practitioner?gradient=ff9900,ff5e00&style=for-the-badge)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
+[![LenelS2](https://gradgen.boris.sh/badge/LenelS2/Access%20Control%20NVR?gradient=0072ce,00e0ff&style=for-the-badge)](https://www.lenels2.com/)
+
+##
+
+
+<br>
+
+<div align="center">
+
+### 🔗 Link Up With Me @: [![LinkedIn – Ray Draleaus](https://img.shields.io/badge/LinkedIn-Ray%20Draleaus-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raydraleaus/)
+
+<br>
 
 
 
